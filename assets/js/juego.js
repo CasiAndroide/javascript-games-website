@@ -109,7 +109,7 @@ const   turnoComputadora = (puntosMinimos) => {
             alert('Nadie gana :(');
         } else if (puntosMinimos > 21) {
             alert('Computadora gana');
-        } else if(puntosComputadora > 21){
+        } else if(puntosComputadora > 21 || puntosMinimos === 21){
             alert('Jugador gana');
         } else{
             alert('Computadora gana');
@@ -140,7 +140,7 @@ btnPedir.addEventListener('click', () => {
         btnDetener.disabled = true;
         turnoComputadora(puntosJugador);
     } else if (puntosJugador === 21){
-        console.warn('21, genial!');
+        alert('Ganador');
         btnPedir.disabled = true;
         btnDetener.disabled = true;
     }
